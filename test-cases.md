@@ -1,7 +1,8 @@
-## CT-001 — Login with valid credentials
+## CT-001 — Login with valid credentials on the Parabank website
 
 **Precondition:** 
 User must be registered and active in the system.
+Access the Parabank website
 
 **Test Data:** 
 Username: qa.squad@test.com 
@@ -16,10 +17,10 @@ Password: Squad@2026
 **Expected Result:** 
 User is redirected to "Accounts Overview" page with account balance visible.
 
-## CT-002 — Login with invalid password
+## CT-002 — Login with invalid password on the Parabank website
 
 **Precondition:** 
-Registered user.
+User must be registered and active in the system.
 Access the Parabank website
 
 **Test Data:** 
@@ -31,6 +32,24 @@ Password: SenhaErrada999
 2. Enter a valid username
 3. Enter an invalid password in the password field
 4. Click on "Log In"
+
+**Expected Result:** 
+Display the error message "The username and password could not be verified".
+
+## CT-003 — Login with invalid email structure on the Parabank website
+
+**Precondition:** 
+User must be registered and active in the system.
+Access the Parabank website
+
+**Test Data:** 
+Username: qa.squad.test.com 
+Password: Squad@2026 
+
+**Steps:**
+1. Access the login page
+2. Enter the invalid email address in the username field.
+3. Click on "Log In"
 
 **Expected Result:** 
 Display the error message "The username and password could not be verified".
